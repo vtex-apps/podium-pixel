@@ -1,0 +1,27 @@
+{
+  "name": "podium-pixel",
+  "vendor": "vtex",
+  "version": "0.0.1",
+  "title": "Podium",
+  "description": "An implementation of Podium chat",
+  "builders": {
+    "pixel": "0.x",
+    "docs": "0.x"
+  },
+  "dependencies": {
+    "vtex.pixel-interfaces": "1.x",
+    "vtex.store": "2.x"
+  },
+  "settingsSchema": {
+    "title": "Podium",
+    "type": "object",
+    "properties": {
+      "apiToken": {
+        "title": "API Token",
+        "description": "Enter your Podium API Token",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

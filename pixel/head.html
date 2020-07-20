@@ -1,0 +1,21 @@
+<script>
+  ;(function() {
+    var apiToken = '{{settings.apiToken}}'
+    if (!apiToken) {
+      console.error(
+        'Warning: No Podium API Token is defined. Please configure it in the apps admin.'
+      )
+      return
+    }
+    ;(function e() {
+      var e = document.createElement('script')
+      ;(e.type = 'text/javascript'),
+        (e.id = 'podium-widget'),
+        (e.defer = true),
+        (e.src = 'https://connect.podium.com/widget.js#API_TOKEN=' + apiToken)
+      e.setAttribute('data-api-token', apiToken)
+      var t = document.getElementsByTagName('script')[0]
+      t.parentNode.insertBefore(e, t)
+    })()
+  })()
+</script>
